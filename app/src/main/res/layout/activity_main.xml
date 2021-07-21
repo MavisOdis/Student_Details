@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/txStudentDetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Students Details"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="43dp"
+        tools:layout_editor_absoluteY="46dp" />
+
+    <EditText
+        android:id="@+id/firstnameInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="First Name"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/txStudentDetails"
+        app:layout_constraintEnd_toStartOf="@+id/txStudentDetails"
+        app:layout_constraintHorizontal_bias="0.737"
+        app:layout_constraintStart_toEndOf="@+id/txStudentDetails"
+        app:layout_constraintStart_toStartOf="@+id/txStudentDetails"
+        app:layout_constraintTop_toBottomOf="@+id/txStudentDetails" />
+
+    <EditText
+        android:id="@+id/lastnameInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Last Name"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/firstnameInput"
+        app:layout_constraintEnd_toStartOf="@+id/firstnameInput"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/firstnameInput"
+        app:layout_constraintStart_toStartOf="@+id/firstnameInput"
+        app:layout_constraintTop_toBottomOf="@+id/firstnameInput" />
+
+    <EditText
+        android:id="@+id/seatnumberInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Enter Seat Number"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="@+id/classInput"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/classInput"
+        app:layout_constraintTop_toBottomOf="@+id/classInput" />
+
+    <EditText
+        android:id="@+id/classInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Enter Class"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/lastnameInput"
+        app:layout_constraintEnd_toStartOf="@+id/lastnameInput"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/lastnameInput"
+        app:layout_constraintTop_toBottomOf="@+id/lastnameInput" />
+
+    <Button
+        android:id="@+id/btnSubmitDetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/submit_details"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seatnumberInput" />
+
+    <Button
+        android:id="@+id/btnGetItems"
+        android:layout_width="172dp"
+        android:layout_height="50dp"
+        android:text="Get Items"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seatnumberInput"  />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/itemRv"
+        android:layout_width="354dp"
+        android:layout_height="352dp"
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnSubmitDetails"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
